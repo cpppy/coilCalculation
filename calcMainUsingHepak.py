@@ -141,14 +141,14 @@ if __name__ == "__main__":
             # coil get temperature-rise from InnerHeat
             coilT = calcCoilAndShell.calcCoilT_InnerHeat(coilT, m , time, dx, ddt , mCu, mSc)
             '''
-            print "coil   ×Ô·¢ÈÈÖ®ºó"
+            print "coil   è‡ªå‘çƒ­ä¹‹å"
             print coilT
             print heliumT
             '''
             # coil get temperature-change from conductivity between all dx-coil
             coilT = calcCoilAndShell.calcNextCoilT(coilT,m,dx, ddt, mCu, mSc)
             '''
-            print "coil   ×ÔÉíµ¼ÈÈ´«²¥"
+            print "coil   è‡ªèº«å¯¼çƒ­ä¼ æ’­"
             print coilT
             '''
             # coil get temperature-decrease from cold helium
@@ -162,7 +162,7 @@ if __name__ == "__main__":
                 hCoil[hi] = calcCoilAndShell.calc_hCoil(heliumDst[hi],spd[hi],dh,dynVis[hi],Cp[hi],con[hi])
             coilT, StOne = calcCoilAndShell.calcConvectionWithCoil(coilT, heliumT , m,dx, ddt, mCu , mSc, hCoil)
             '''
-            print "coil ºÍº¤ÆøÈÈ½»»»Ö®ºó"
+            print "coil å’Œæ°¦æ°”çƒ­äº¤æ¢ä¹‹å"
             print coilT
             print "st1"
             print StOne
@@ -180,7 +180,7 @@ if __name__ == "__main__":
         
         
         print "******************************************************************"
-        # second , calc the helium in dt £¬ get  [[[ heliumT, heliumP, heliumDst, spd ]]]
+        # second , calc the helium in dt ï¼Œ get  [[[ heliumT, heliumP, heliumDst, spd ]]]
         nextT = [0]*m
         nextP = [0]*m
         nextDensity = [0]*m
@@ -272,7 +272,7 @@ xls.close()
 
 
 '''
-    #³¢ÊÔÄÚÖÃbutton
+    #å°è¯•å†…ç½®button
     class myapp(wx.App):
                         def OnInit(self):
                                 frame=wx.Frame(parent=None,
